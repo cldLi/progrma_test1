@@ -1,0 +1,16 @@
+#include <stdio.h> // Жадный алгоритм на Си
+
+int main() 
+
+{ //main function
+	int numbers[] = {1, 5, 10, 50}; //nominals
+	int ch = 10000000; //sdacha
+	for(int i=3; i >= 0; i--) // пробегаемся по намберс начиная с 3 элемента , то есть с 50, а затем двигаемся влево
+{
+	while(ch >= numbers[i]) //пока сдача будет больше либо равна номиналу который выбрал цикл фор
+	{
+		ch = ch - numbers[i]; // вычитаем номинал
+		printf("Nom: %d, each %d\n", numbers[i], ch); // вывод
+	}
+}
+}
