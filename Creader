@@ -1,0 +1,11 @@
+import re
+
+with open('main.c', 'r', encoding='utf-8') as file:
+    code = f.read()
+    malloc = len(re.findall(r'\bmalloc\(', code))
+    frees = len(re.findall(r'\bfree\(', code))
+
+    if malloc != frees:
+        print('Maybe code having leak')
+    else:
+        print('All nice')
