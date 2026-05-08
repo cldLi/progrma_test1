@@ -1,5 +1,6 @@
 import turtle as t
 
+t.hideturtle()
 t.speed(0)
 t.goto(0, 300)
 t.goto(0, -300)
@@ -33,27 +34,28 @@ def draw_g(func, from_x, to_x):
         else:
             t.penup()
 
+try:
+    while True:
+        print('0. Stop program')
+        print('1. Draw line')
+        print('2. Draw parabola')
+        print('3. Draw hyperbola')
+        choice = int(input('Enter 0-3: '))
 
-print('Предупреждение: программа строит графики по пикселям!')
-print('1. Нарисовать прямую')
-print('2. Нарисовать параболу')
-print('3. Нарисовать гиперболу')
-choice = int(input('1 или 2 или 3: '))
 
-if choice == 1:
-    k_l = float(input('Введите значение k прямой: '))
-    b_l = float(input('Введите значение b прямой: '))
-    draw_g(line, -300, 300)
-elif choice == 2:
-    a_p = float(input('Введите значение a параболы: '))
-    b_p = float(input('Введите значение b параблоы: '))
-    c_p = float(input('Введите значение c параболы: '))
-    draw_g(parabola, -300, 300)
-elif choice == 3:
-    k_h = float(input('Введите значение k гиперболы: '))
-    draw_g(hyperbola, -300, 300)
-else:
-    print('Неверный выбор. Перезапустите программу')
+        if choice == 1:
+            k_l, b_l = float(input('k for line: ')), float(input('b for line: '))
+            draw_g(line, -300, 300)
+        elif choice == 2:
+            a_p, b_p, c_p = float(input('a for parabola: ')), float(input('b for parabola: ')), float(input('c for parabola: '))
+            draw_g(parabola, -300, 300)
+        elif choice == 3:
+            k_h = float(input('k for hyperbola: '))
+            draw_g(hyperbola, -300, 300)
+        elif choice == 0:
+            break
+except ValueError:
+        print('Please, retry again')
 
 t.done()
 
