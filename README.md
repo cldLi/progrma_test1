@@ -30,6 +30,6 @@ def draw_g(func, from_x, to_x):
 * **Calculation:** For every X, the program calculates Y using the provided formula.
 * **Execution:** If the result is valid, the Turtle moves to the coordinates and draws a point. This happens about 600 times, resulting in a smooth, high-quality graph.
 
-
+h
 
 
