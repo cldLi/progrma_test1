@@ -22,9 +22,9 @@ int main() {
 	}
 
 	if (res != -1) {
-		printf("This nigga bitch is found in: %d\n", res);
+		printf("This n found in: %d\n", res);
 	} else {
-		printf("Nigga not founded\n");
+		printf("N not founded\n");
 	}
 	return 0;
 }
